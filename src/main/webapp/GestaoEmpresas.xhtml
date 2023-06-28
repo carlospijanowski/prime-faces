@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <meta charset="UTF-8"/>
+    <title>Gestão de Empresas</title>
+
+    <h:outputStylesheet library="pasta-dentro-do-projeto" name="estilo.css" />
+
+</h:head>
+<h:body>
+
+<header>
+    <h:graphicImage library="pasta-dentro-do-projeto" name="logo.png"/>
+</header>
+
+<div id="conteudo">
+    <h:form>
+        <h:panelGrid columns="2">
+            <h:outputLabel value="Razão Social: " for="razaoSocial"/>
+            <h:inputText id="razaoSocial" value=""/>
+
+            <h:outputLabel value="Nome Fantasia: " for="nomeFantasia"/>
+            <h:inputText id="nomeFantasia" value=""/>
+
+            <h:outputLabel value="Tipo Empresa"/>
+            <h:selectOneMenu id="tipo">
+                <f:selectItem itemLabel="Selecione..."/>
+                <f:selectItem itemLabel="MEI" itemValue="MEI"/>
+                <f:selectItem itemLabel="LTDA" itemValue="LTDA"/>
+            </h:selectOneMenu>
+
+            <h:outputLabel />
+            <h:commandButton value="salvar"/>
+        </h:panelGrid>
+    </h:form>
+</div>
+
+<footer>
+    Aplicando conceitos JSF e PrimeFaces
+</footer>
+
+</h:body>
+</html>
