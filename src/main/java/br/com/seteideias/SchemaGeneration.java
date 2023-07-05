@@ -1,6 +1,6 @@
 package br.com.seteideias;
 
-import br.com.seteideias.repository.dto.Teste;
+import br.com.seteideias.repository.entity.Teste;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -18,7 +18,7 @@ public class SchemaGeneration {
 
         List<Teste> result =    entityManager.createQuery("from Teste", Teste.class).getResultList();
 //2
-        result.forEach(e-> System.out.println(e.getTeste()));
+        result.forEach(e-> System.out.println("PRINTANDO NO CONSOLE.: " + e.getTeste()));
 
         entityManager.close();
         entityManagerFactory.close();
