@@ -1,10 +1,10 @@
-package br.com.seteideias.repository.dto;
+package br.com.seteideias.repository.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "Teste")
+@Table(name = "teste")
 public class Teste implements Serializable {
     private static final long serialVersionUID = 1L;
 

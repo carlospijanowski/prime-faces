@@ -1,6 +1,6 @@
 package br.com.seteideias;
 
-import br.com.seteideias.repository.dto.Teste;
+import br.com.seteideias.repository.entity.Teste;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
