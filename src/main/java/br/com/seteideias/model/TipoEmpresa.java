@@ -1,6 +1,6 @@
 package br.com.seteideias.model;
 
-import br.com.seteideias.utils.StringUtils;
+import br.com.seteideias.util.StringUtils;
 
 public enum TipoEmpresa {
 

@@ -10,21 +10,17 @@ import javax.persistence.criteria.Root;
 import java.io.Serializable;
 import java.util.List;
 
-public class RamoAtividadesRepository implements Serializable {
+public class RamoAtividades implements Serializable {
     public static final long serialVersionUID = 1L;
 
     private EntityManager manager;
 
-    public RamoAtividadesRepository() {
+    public RamoAtividades() {
     }
 
-    public RamoAtividadesRepository(EntityManager manager) {
+    public RamoAtividades(EntityManager manager) {
         this.manager = manager;
     }
-
-//    public Empresa porId(String id) {
-//        return manager.find(Empresa.class, id);
-//    }
 
     public List<RamoAtividade> pesquisar(String descricao) {
         CriteriaBuilder criteriaBuilder = manager.getCriteriaBuilder();
@@ -36,14 +32,4 @@ public class RamoAtividadesRepository implements Serializable {
         return query.getResultList();
     }
 
-//
-//    public Empresa guardar(Empresa empresa) {
-//        return manager.merge(empresa);
-//    }
-//
-//    public void remover(Empresa empresa){
-//        Empresa porId = porId(empresa.getId().toString());
-//        if(Objects.nonNull(porId)){
-//            manager.remove(porId);
-//        }
 }

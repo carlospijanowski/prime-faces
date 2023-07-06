@@ -1,4 +1,4 @@
-package br.com.seteideias.utils;
+package br.com.seteideias.util;
 
 public class StringUtils {
     /**

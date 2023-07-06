@@ -2,7 +2,7 @@ package br.com.seteideias.beans;
 
 import br.com.seteideias.model.TipoEmpresa;
 import br.com.seteideias.repository.entity.Empresa;
-import br.com.seteideias.repository.EmpresasRepository;
+import br.com.seteideias.repository.Empresas;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
@@ -18,7 +18,7 @@ public class GestaoEmpresasBean implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Inject
-    private EmpresasRepository empresasRepository;
+    private Empresas empresas;
 
     private Empresa empresa = new Empresa();
     private List<Empresa> empresasList;
@@ -27,7 +27,7 @@ public class GestaoEmpresasBean implements Serializable {
     }
 
     public void getEmpresasList(){
-        empresasList = empresasRepository.todasAsEmpresas();
+        empresasList = empresas.todasAsEmpresas();
     }
     public TipoEmpresa[] getTiposEmpresa(){
         return TipoEmpresa.values();
@@ -37,9 +37,7 @@ public class GestaoEmpresasBean implements Serializable {
         System.out.println("salvando!!!\n" +
                 "empresa.: "+empresa.getRazaoSocial()+"\n" +
                 "nome fantasia.: "+empresa.getNomeFantasia() +"\n" +
-                "tipo empresa.: "+empresa.getTipoEmpresa() +"\n" +
-                "data fundação.: " +empresa.getDataFundacao() +"\n" +
-                "valor do faturamento.: " + empresa.getFaturamento()
+                "data fundação.: " +empresa.getDataFundacao()
         );
     }
 

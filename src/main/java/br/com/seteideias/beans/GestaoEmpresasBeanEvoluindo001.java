@@ -1,7 +1,7 @@
 package br.com.seteideias.beans;
 
 import br.com.seteideias.repository.entity.Empresa;
-import br.com.seteideias.repository.EmpresasRepository;
+import br.com.seteideias.repository.Empresas;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
@@ -15,11 +15,11 @@ public class GestaoEmpresasBeanEvoluindo001 implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Inject
-    private EmpresasRepository empresasRepository = new EmpresasRepository();
+    private Empresas empresas;
 
     private List<Empresa> listaEmpresas;
     public void todasEmpresas(){
-        listaEmpresas = empresasRepository.todasAsEmpresas();
+        listaEmpresas = empresas.todasAsEmpresas();
     }
 
     public List<Empresa> getListaEmpresas() {

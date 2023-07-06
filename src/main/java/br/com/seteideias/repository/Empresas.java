@@ -1,30 +1,25 @@
 package br.com.seteideias.repository;
 
 import br.com.seteideias.repository.entity.Empresa;
-import br.com.seteideias.repository.entity.Teste;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import static br.com.seteideias.utils.StringUtils.PERSISTENCE_UNIT_NAME;
-
-public class EmpresasRepository implements Serializable {
+public class Empresas implements Serializable {
     public static final long serialVersionUID = 1L;
 
-    @Inject
+//    @Inject
     private EntityManager manager;
 
-    public EmpresasRepository() {
+    public Empresas() {
     }
 
-    public EmpresasRepository(EntityManager manager) {
+    public Empresas(EntityManager manager) {
         this.manager = manager;
     }
 
